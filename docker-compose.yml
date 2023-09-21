@@ -1,0 +1,62 @@
+version: '3.0'
+
+# PostgresAdmin MicroService
+services:
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   container_name: pgadmin
+  #   env_file:
+  #     - ./backend/.env  # Load environment variables from .env file
+  #   ports:
+  #     - "5050:80"
+  #   networks:
+  #     - ft_transcendence_network
+
+# Posgtres Microservice
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    user: postgres
+    env_file:
+      - ./backend/.env
+    ports:
+     - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - ft_transcendence_network
+  
+# Backend microService Depends on Postgres 
+  backend:
+    build:
+      context: ./backend #/nestjs_hello
+    container_name: backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "3000:3000"
+      - "5555:5555"
+    depends_on:
+      - postgres
+    networks:
+      - ft_transcendence_network
+
+# FrontEnd microService Depends on Backend
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "9090:3001"
+    depends_on:
+      - backend  
+    networks:
+      - ft_transcendence_network
+
+# Orchestrated Network
+networks:
+  ft_transcendence_network:
+
+# Storage
+volumes:
+  pg_data :
