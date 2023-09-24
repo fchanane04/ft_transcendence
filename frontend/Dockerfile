@@ -8,10 +8,10 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
-COPY package*.json ./
+COPY package*.json .
 
 # Installing the packages while the image is building
-RUN npm install -y
+RUN npm install
 
 # Bundle app source, i.e. copying all your required files for the app
 # Note: files & folders inside .dockerignore will not be copied.
@@ -24,4 +24,4 @@ EXPOSE 9090
 
 # Runtime command to be executed when the container is launched
 # Test the backend
-CMD ["node", "app.js"]
+CMD ["npm", "run", "dev"]

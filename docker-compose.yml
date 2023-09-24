@@ -48,10 +48,12 @@ services:
     container_name: frontend
     ports:
       - "9090:3001"
-    depends_on:
-      - backend  
+    # depends_on:
+    #   - backend  
     networks:
       - ft_transcendence_network
+    volumes:
+      - "./frontend:/usr/src/app"
 
 # Orchestrated Network
 networks:
