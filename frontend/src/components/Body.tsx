@@ -1,11 +1,10 @@
 import OffLineContent from "./OffLineContent";
 import PopUpUserSetting from "./PopUpUserSetting";
 
-function Body() {
+function Body(props) {
   return (
     <div className="body">
-      <OffLineContent />
-      <PopUpUserSetting />
+      {!props.connected? <OffLineContent /> : <PopUpUserSetting />}
     </div>
   );
 }

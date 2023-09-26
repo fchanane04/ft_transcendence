@@ -16,6 +16,9 @@
 .content {
   min-height: 100vh;
   min-width: 320px;
+  .body {
+    min-height: calc(100vh - 218px);
+  }
   &.off-line {
     background: var(--color-3);
     .body {
@@ -23,7 +26,6 @@
       background-repeat: no-repeat;
       background-position: center bottom;
       background-size: 100% auto;
-      min-height: calc(100vh - 218px);
       .off-line-body {
         min-height: inherit;
       }
@@ -64,10 +66,12 @@
 
 @media screen and (min-width: 768px) {
   .content {
+    .body {
+      min-height: calc(100vh - 256px);
+    }
     &.off-line {
       .body {
         background-size: auto auto;
-        min-height: calc(100vh - 256px);
       }
     }
   }

@@ -2,6 +2,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
   color: var(--color-1);
+  background: var(--color-3);
   p {
     margin-bottom: 0;
     svg {

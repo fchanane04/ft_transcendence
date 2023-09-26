@@ -1,6 +1,7 @@
 .header {
     padding-top: 25px;
     padding-bottom: 25px;
+    background: var(--color-3);
     .logo {
       width: 150px;
     }
