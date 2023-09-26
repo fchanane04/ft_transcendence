@@ -1,0 +1,14 @@
+.footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: var(--color-1);
+  p {
+    margin-bottom: 0;
+    svg {
+      margin: * 5px * *;
+    }
+  }
+  strong {
+    font-weight: 900;
+  }
+}

@@ -1,0 +1,55 @@
+.big-txt {
+  font-family: "Nunito Sans";
+  font-size: responsive 100px 170px;
+  line-height: responsive 120px 190px;
+  font-range: 480px 1440px;
+  text: 900 center lowercase;
+  color: var(--color-2);
+  margin-bottom: 80px;
+  span {
+    display: inline-block;
+    size: 80px;
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    &::after {
+      content: "";
+      display: block;
+      size: 50px;
+      margin: * auto;
+      border-radius: 50%;
+      background-color: var(--color-5);
+    }
+    &:last-child {
+      margin-bottom: -40px;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-75%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(75%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 576px) {
+  .big-txt {
+    span {
+      &::after {
+        size: 40px;
+      }
+    }
+  }
+}

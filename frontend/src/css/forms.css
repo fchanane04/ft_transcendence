@@ -1,0 +1,49 @@
+.form-control {
+  &:focus {
+    box-shadow: none;
+    border-color: var(--color-5);
+  }
+}
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: var(--color-2);
+}
+.form-check-input[type="checkbox"] {
+  margin-right: 5px;
+  :hover {
+    background-color: var(--color-2);
+    border-color: var(--color-2);
+  }
+}
+.form-check-input:checked {
+  background-color: var(--color-3);
+  border-color: var(--color-3);
+}
+
+.primary-label {
+  text: 600 16px;
+  color: var(--color-6);
+}
+
+.primary-input {
+  border-radius: 5px;
+  background-color: rgba(217, 217, 217, 0.56);
+  border-color: transparent;
+  &:focus {
+    background-color: rgba(217, 217, 217, 0.2);
+  }
+}
+.double-auth {
+  transition: all 0.3s ease;
+  height: 0px;
+  margin-bottom: 70px;
+  overflow: hidden;
+  &.close {
+    height: 0px;
+    overflow: hidden;
+  }
+  &.open {
+    height: 70px;
+    margin-bottom: 20px;
+  }
+}

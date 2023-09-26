@@ -54,6 +54,8 @@ services:
       - ft_transcendence_network
     volumes:
       - "./frontend:/usr/src/app"
+    restart: always
+    image: frontend
 
 # Orchestrated Network
 networks:

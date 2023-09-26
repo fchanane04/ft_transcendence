@@ -1,0 +1,74 @@
+:root {
+  --color-1: #fdffff;
+  --color-2: #223744;
+  --color-3: #3e85ff;
+  --color-4: #4be4a8;
+  --color-5: #d9d9d9;
+  --color-6: #0d0f17;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+.content {
+  min-height: 100vh;
+  min-width: 320px;
+  &.off-line {
+    background: var(--color-3);
+    .body {
+      background-image: url("../images/bg-home.jpg");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% auto;
+      min-height: calc(100vh - 218px);
+      .off-line-body {
+        min-height: inherit;
+      }
+    }
+  }
+}
+.bnt {
+  font-size: responsive 15px 18px;
+  font-range: 480px 1440px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  min-width: 120px;
+  text: 900;
+  transition: all 0.5s ease-in-out;
+}
+.primary-bnt {
+  @inherit: .bnt;
+  background-color: var(--color-5);
+  color: var(--color-3);
+  border: 2px solid var(--color-5);
+  &:hover {
+    background-color: var(--color-3);
+    color: var(--color-5);
+  }
+}
+.secondary-bnt {
+  @inherit: .bnt;
+  background-color: var(--color-4);
+  color: var(--color-1);
+  border: 1px solid transparent;
+  &:hover {
+    background-color: var(--color-1);
+    color: var(--color-4);
+    border-color: var(--color-4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    &.off-line {
+      .body {
+        background-size: auto auto;
+        min-height: calc(100vh - 256px);
+      }
+    }
+  }
+}

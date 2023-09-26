@@ -14,7 +14,7 @@ function PopUpAuth() {
       </button>
 
       {isOpen && (
-        <div className="modal-box">
+        <div className="modal-box-auth">
           <div className="modal-content">
             <a
               onClick={() => setIsOpen(false)}

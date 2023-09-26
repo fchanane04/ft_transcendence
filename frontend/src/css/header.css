@@ -1,0 +1,15 @@
+.header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    .logo {
+      width: 150px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+      .logo {
+        width: auto;
+      }
+    }
+  }

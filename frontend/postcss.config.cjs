@@ -4,11 +4,12 @@ module.exports = {
   plugins: {
     "postcss-nested": {},
     "postcss-mixins": {},
+    "postcss-inherit" : {},
     "postcss-responsive-type": {},
     "postcss-short-text": {},
     "postcss-position": {},
-    'postcss-short':{},
-    'postcss-font-magician': {
+    "postcss-short":{},
+    "postcss-font-magician": {
       variants: {
         'Nunito': {
           300: ["ttf, woff, eot, woff2, svg"],

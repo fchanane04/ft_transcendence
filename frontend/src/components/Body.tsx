@@ -1,12 +1,11 @@
-import PopUpAuth from "./PopUpAuth";
+import OffLineContent from "./OffLineContent";
+import PopUpUserSetting from "./PopUpUserSetting";
 
 function Body() {
   return (
-    <div className="body d-flex flex-column justify-content-center align-items-center">
-      <h1 className="big-txt">
-        p<span></span>ng <br />p<span></span>ng
-      </h1>
-      <PopUpAuth />
+    <div className="body">
+      <OffLineContent />
+      <PopUpUserSetting />
     </div>
   );
 }
