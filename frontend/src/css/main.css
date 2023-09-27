@@ -19,7 +19,7 @@
   .body {
     min-height: calc(100vh - 218px);
   }
-  &.off-line {
+  .off-line {
     background: var(--color-3);
     .body {
       background-image: url("../images/bg-home.jpg");

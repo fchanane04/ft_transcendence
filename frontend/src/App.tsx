@@ -4,19 +4,13 @@ import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.css'
 import './css/style.css'
 
-let connected: boolean = false
-let classes = (c: boolean) =>
-{
-  let n = "content";
-  !c ? n+= " off-line" : " on-line";
-  return n;
-}
+
 
 function App() {
   return (
-    <div className={classes(connected)}>
+    <div className="content">
       <Header />
-      <Body connected="false"/>
+      <Body/>
       <Footer />
     </div>
   );

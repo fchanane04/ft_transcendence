@@ -1,10 +1,18 @@
+import Cookies from "js-cookie";
 import OffLineContent from "./OffLineContent";
-import PopUpUserSetting from "./PopUpUserSetting";
+import OnLineContent from "./OnLineContent";
 
-function Body(props) {
+
+function Body() {
+  Cookies.set("userLoggedIn", "token");
+  // Cookies.remove('userLoggedIn');
+  let userLoggedIn = Cookies.get("userLoggedIn")? true : false;
+  console.log(userLoggedIn);
   return (
-    <div className="body">
-      {!props.connected? <OffLineContent /> : <PopUpUserSetting />}
+    <div className={userLoggedIn ? "on-line" : "off-line"}>
+      <div className="body">
+        {userLoggedIn ? (<OnLineContent />) : (<OffLineContent />)}
+      </div>
     </div>
   );
 }
