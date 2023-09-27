@@ -11,7 +11,7 @@ function Body() {
   return (
     <div className={userLoggedIn ? "on-line" : "off-line"}>
       <div className="body">
-        {userLoggedIn ? (<OnLineContent />) : (<OffLineContent />)}
+        {userLoggedIn ? <OnLineContent /> : <OffLineContent />}
       </div>
     </div>
   );
