@@ -6,7 +6,7 @@ FROM node:latest
 
 # Expose the port your Nest.js application is running on
 
-EXPOSE 3000
+EXPOSE 5000
 EXPOSE 5555
 
 RUN apt-get update 

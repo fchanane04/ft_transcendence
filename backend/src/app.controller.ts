@@ -1,16 +1,14 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, Get, Res } from '@nestjs/common';
+import { Response } from 'express';
+import * as path from 'path';
 
 @Controller()
-export class AppController {constructor(private readonly appService: AppService) {}
-
-@Get('test/database')
-async testDatabaseConnection() {
-  try {
-    const result = await this.appService.testDatabaseConnection();
-    return { message: 'Connected to the database', result };
-  } catch (error) {
-    return { message: 'Database connection failed', error: error.message };
+export class AppController {
+  // Landing page route
+  @Get()
+  landingPage(@Res() res: Response): void {
+    res.sendFile('/usr/src/app/src/game/landingPage.html');
   }
-}
+
+  // Other routes and actions
 }
