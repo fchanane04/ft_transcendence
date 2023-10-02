@@ -22,10 +22,6 @@ COPY . .
 
 RUN npm install -y
 
-# Make migrations to DB
-
-
-
 ################################## RUNTIME #################################################
 
 # Start the application
